@@ -7,4 +7,4 @@ import { RoutesRoutingModule } from './routes-routing.module';
     declarations: [],
     imports: [SharedModule, RoutesRoutingModule],
 })
-export class RoutesModule {}
+export class RoutesModule { }
