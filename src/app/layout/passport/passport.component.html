@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="wrap">
+        <div class="top">
+            <div class="head">
+                <!-- <img class="logo" src="./assets/img/logo-color.svg"> -->
+                <img class="logo" src="./assets/img/logo-zorro.png">
+                <span class="title">新美达ERP</span>
+            </div>
+            <!-- <p class="desc">新美达ERP是解决新美达不能兼容运行问题</p> -->
+        </div>
+        <router-outlet></router-outlet>
+        <div *ngIf="links.length > 0 || items.length > 0" class="global-footer__links">
+            <a *ngFor="let i of links" class="global-footer__links-item" (click)="to(i)" [innerHTML]="i.title"></a>
+            <a *ngFor="let i of items" class="global-footer__links-item" (click)="to(i)">
+                <ng-container *ngTemplateOutlet="i.host"></ng-container>
+            </a>
+        </div>
+        <div class="global-footer__copyright">
+            Copyright
+            <i nz-icon nzType="copyright"></i>
+            2018
+            <a href="" target="_blank">万事达信息部</a>出品
+        </div>
+        <!-- <global-footer [links]="links">
+            <ng-template #copyright>
+
+            </ng-template>
+        </global-footer> -->
+    </div>
+</div>

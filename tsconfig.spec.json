@@ -1,0 +1,44 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./out-tsc/spec",
+        "types": [
+            "jasmine",
+            "node"
+        ],
+        "paths": {
+            "@env": [
+                "src/environments"
+            ],
+            "@env/*": [
+                "src/environments/*"
+            ],
+            "@core": [
+                "src/app/core"
+            ],
+            "@core/*": [
+                "src/app/core/*"
+            ],
+            "@routes": [
+                "src/app/routes"
+            ],
+            "@routes/*": [
+                "src/app/routes/*"
+            ],
+            "@shared": [
+                "src/app/shared"
+            ],
+            "@shared/*": [
+                "src/app/shared/*"
+            ]
+        }
+    },
+    "files": [
+        "src/test.ts",
+        "src/polyfills.ts"
+    ],
+    "include": [
+        "src/**/*.spec.ts",
+        "src/**/*.d.ts"
+    ]
+}

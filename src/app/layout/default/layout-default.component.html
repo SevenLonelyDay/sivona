@@ -1,0 +1,31 @@
+<nz-layout class="left-layout">
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed">
+        <div class="logo"></div>
+        <layout-sidebar [isCollapsed]="isCollapsed"></layout-sidebar>
+    </nz-sider>
+    <nz-layout class="{{!isCollapsed?'right-layout-200 ant-layout':'right-layout-80 ant-layout'}}">
+        <nz-header>
+            <layout-header [(isCollapsed)]="isCollapsed"></layout-header>
+        </nz-header>
+        <nz-content>
+            <div class="inner-content" [ngStyle]="">
+                <router-outlet></router-outlet>
+                ...
+                <br />
+                Really
+                <br />...<br />...<br />...<br />
+                long
+                <br />...<br />...<br />...<br />...<br />...<br />...
+                <br />...<br />...<br />...<br />...<br />...<br />...
+                <br />...<br />...<br />...<br />...<br />...<br />...
+                <br />...<br />...<br />...<br />...<br />...<br />...
+                <br />...<br />...<br />...<br />...<br />...<br />...
+                <br />...<br />...<br />...<br />...<br />...<br />...
+                <br />...<br />...<br />...<br />...<br />...<br />
+                content
+            </div>
+        </nz-content>
+        <nz-footer class="{{!isCollapsed?'right-layout-200 ant-layout-footer':'right-layout-80 ant-layout-footer'}}">
+            Ant Design ©2019 Implement By Angular</nz-footer>
+    </nz-layout>
+</nz-layout>
